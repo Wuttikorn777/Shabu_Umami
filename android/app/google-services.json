@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017686811958",
+    "project_id": "shabu-umami-db",
+    "storage_bucket": "shabu-umami-db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017686811958:android:62d3356b5224cbd0d03f97",
+        "android_client_info": {
+          "package_name": "com.example.shabu_umami"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4aIABigyD6NPdVMA_pTPUlonGReV9d8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

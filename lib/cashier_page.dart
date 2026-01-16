@@ -276,7 +276,12 @@ class _CashierPageState extends State<CashierPage> {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.orange.withOpacity(0.1),
+                        color: const Color.fromARGB(
+                          255,
+                          255,
+                          21,
+                          0,
+                        ).withOpacity(0.1),
                         blurRadius: 10,
                         offset: const Offset(0, 5),
                       ),

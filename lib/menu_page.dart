@@ -28,7 +28,7 @@ class _MenuPageState extends State<MenuPage> {
       MenuItem(
         name: 'เนื้อวากิวสไลด์',
         imageUrl:
-            'https://png.pngtree.com/png-vector/20201128/ourmid/pngtree-japanese-wagyu-beef-png-image_2437437.jpg',
+            'https://blog.hungryhub.com/wp-content/uploads/2018/10/Japanese-Wagyu.jpg',
       ),
       MenuItem(
         name: 'เนื้อใบพายสไลด์',
@@ -60,7 +60,7 @@ class _MenuPageState extends State<MenuPage> {
       MenuItem(
         name: 'เฟรนซ์ฟราย',
         imageUrl:
-            'https://png.pngtree.com/png-vector/20210713/ourmid/pngtree-french-fries-gourmet-color-snacks-png-image_3575968.jpg',
+            'https://marketplace.canva.com/MACl4lVv9s4/2/thumbnail_large-1/canva-plate-of-french-fries-cutout-MACl4lVv9s4.png',
       ),
       MenuItem(
         name: 'เกี๊ยวทอด',
@@ -90,7 +90,7 @@ class _MenuPageState extends State<MenuPage> {
       MenuItem(
         name: 'ไอศกรีมกะทิ',
         imageUrl:
-            'https://png.pngtree.com/png-vector/20240320/ourmid/pngtree-ice-cream-in-coconut-shell-png-image_12183218.png',
+            'https://img.wongnai.com/p/400x0/2022/02/21/3f6dc44271db4362a95a0768ad616d12.jpg',
       ),
     ],
   };

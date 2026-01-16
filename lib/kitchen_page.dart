@@ -7,7 +7,7 @@ class KitchenPage extends StatelessWidget {
   //  update() สถานะ
   void _finishOrder(String docId) {
     FirebaseFirestore.instance.collection('orders').doc(docId).update({
-      'status': 'served', // เปลี่ยนสถานะเป็น "เสิร์ฟแล้ว" (ข้อมูลยังอยู่ครบ)
+      'status': 'served', // เปลี่ยนสถานะเป็น "เสิร์ฟแล้ว"
     });
   }
 
@@ -28,11 +28,13 @@ class KitchenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("รายการอาหารที่ต้องทำ 👨‍🍳"),
-        backgroundColor: Colors.blueGrey,
+        title: const Text("รายการอาหารที่ต้องทำ (ครัว)"),
+        // --- ปรับสี 1: หัวข้อ ---
+        backgroundColor: Colors.blue[700],
         foregroundColor: Colors.white,
       ),
-      backgroundColor: Colors.blueGrey[50],
+      // --- ปรับสี 2: พื้นหลัง ---
+      backgroundColor: Colors.blue[50],
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('orders')
@@ -47,15 +49,16 @@ class KitchenPage extends StatelessWidget {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Icon(
                     Icons.check_circle_outline,
                     size: 100,
-                    color: Colors.grey,
+                    // --- ปรับสี 3: ไอคอนตอนว่าง ---
+                    color: Colors.blueGrey[200],
                   ),
                   Text(
                     "เคลียร์ออเดอร์หมดแล้วครับ!",
-                    style: TextStyle(fontSize: 20, color: Colors.grey),
+                    style: TextStyle(fontSize: 20, color: Colors.blueGrey[400]),
                   ),
                 ],
               ),
@@ -87,9 +90,10 @@ class KitchenPage extends StatelessWidget {
                         vertical: 10,
                         horizontal: 15,
                       ),
-                      decoration: const BoxDecoration(
-                        color: Colors.blueGrey,
-                        borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                        // --- ปรับสี 4: หัวบิล ---
+                        color: Colors.blue[800],
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(12),
                           topRight: Radius.circular(12),
                         ),
@@ -121,7 +125,10 @@ class KitchenPage extends StatelessWidget {
                               children: [
                                 Text(
                                   entry.key,
-                                  style: const TextStyle(fontSize: 20),
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black87,
+                                  ),
                                 ),
                                 Container(
                                   padding: const EdgeInsets.symmetric(
@@ -129,15 +136,17 @@ class KitchenPage extends StatelessWidget {
                                     vertical: 2,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: Colors.orange[100],
+                                    // --- ปรับสี 5: พื้นหลัง ---
+                                    color: Colors.blue[100],
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: Text(
                                     "x ${entry.value}",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.deepOrange,
+                                      // --- ปรับสี 6: ตัวเลขจำนวน ---
+                                      color: Colors.blue[900],
                                     ),
                                   ),
                                 ),
@@ -156,12 +165,15 @@ class KitchenPage extends StatelessWidget {
                         width: double.infinity,
                         child: ElevatedButton.icon(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green,
+                            backgroundColor: Colors.teal,
                             foregroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                           ),
                           onPressed: () => _finishOrder(order.id),
-                          icon: const Icon(Icons.check),
+                          icon: const Icon(Icons.check_circle),
                           label: const Text(
                             "ปรุงเสร็จแล้ว (เสิร์ฟ)",
                             style: TextStyle(fontSize: 18),
