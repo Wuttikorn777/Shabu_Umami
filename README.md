@@ -25,6 +25,20 @@ This project simulates a real-world scenario of a Shabu/Hotpot buffet restaurant
 | **State Management** | `setState` & `StreamBuilder` (Real-time data flow) |
 | **Key Packages** | `cloud_firestore` (Database), `qr_flutter` (Payment Gen) |
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="image/landing.png" alt="landing Page" width="50%">
+</p>
+
+<p align="center">
+  <img src="image/menu.png" alt="manu Page" width="30%">
+  <img src="image/cartmenu.png" alt="cart Page" width="30%">
+  <img src="image/historyorder.png" alt="historyorder Interface" width="30%">
+  <img src="image/kitchen.png" alt="historyorder Interface" width="30%">
+  <img src="image/cash.png" alt="cash Interface" width="30%">
+</p>
+
 ## 🚀 How to Run
 
 1.  **Clone the repository**
